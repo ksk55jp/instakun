@@ -1,0 +1,9 @@
+<h1>インスタくん</h1>
+<%= notice %><br>
+<%= link_to "新規投稿する", new_picture_path, class: 'btn btn-default' %>
+<% @pictures.each do |picture| %>
+  <p>タイトル：<%=picture.title%></p>
+  <p>作成日付：<%=picture.created_at%></p>
+  <%= link_to "編集", edit_picture_path(picture.id), class: 'btn btn-success btn-primary' %>
+  <%= link_to "削除", picture_path(picture.id), method: :DELETE, data: {confirm: '本当に削除してもいいですか？'} %>
+<% end %>
