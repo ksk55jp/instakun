@@ -14,3 +14,9 @@
 
 # Requirement08:To exclude sensitive information to be published by git...
 .env
+
+
+# Development memo
+/memo.txt
+*.jpg
+*.png

@@ -8,13 +8,21 @@ class PicturesController < ApplicationController
   end
 
   def new
-    @picture = Picture.new
+    Rails.logger.info "new was called."
+    if @picture
+      Rails.logger.info "new with pacture_params"
+      @picture = Picture.new(picture_params)
+    else
+      Rails.logger.info "new dake"
+      @picture = Picture.new
+    end
   end
 
   def create
     #Picture.create(picture_params)
+    Rails.logger.info "create was called"
     @picture = Picture.new(picture_params)
-    if @picture.save
+    if @picture.save(picture_params)
       redirect_to pictures_path, notice: "投稿を作成しました"
     else
       render 'new'
@@ -40,6 +48,6 @@ private
   end
 
   def picture_params
-    params.require(:picture).permit(:title, :comment)
+    params.require(:picture).permit(:title, :comment, :image)
   end
 end

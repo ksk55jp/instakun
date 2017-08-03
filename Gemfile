@@ -47,3 +47,11 @@ group :development, :test do
   gem 'better_errors'
 end
 
+# Added by KsK for loading bootstrap
+gem 'twitter-bootstrap-rails'
+
+# Added by KsK for image uploading
+gem 'carrierwave'
+gem 'mini_magick'
+
+

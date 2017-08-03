@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+.menu li {
+  float:left;
+  list-style: none;
+  text-decoration: none;
+  color skyblue;
+  padding: 50px;
+}
