@@ -45,6 +45,9 @@ group :development, :test do
   # For easier debugging # DIVE14Exam02
   gem 'pry-rails'
   gem 'better_errors'
+
+  # Added by KsK for email verification # DIVE14Exam02
+  mount LetterOpenerWeb::Engine, at: "/letter_opener"
 end
 
 # Added by KsK for loading bootstrap
