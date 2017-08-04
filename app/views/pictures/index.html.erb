@@ -11,6 +11,7 @@
       <div class="postimage">
         <p>タイトル：<%=picture.title%></p>
         <p>作成日付：<%=picture.created_at%></p>
+        <p>投稿者：<%=picture.user.name%></p>
         <%= post_image(picture) %>
         <%= link_to "編集", edit_picture_path(picture.id), class: 'btn btn-success btn-primary btn-block' %>
         <%= link_to "削除", picture_path(picture.id), method: :DELETE, data: {confirm: '本当に削除してもいいですか？'}, class: 'btn btn-danger btn-block' %>

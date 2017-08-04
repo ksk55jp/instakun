@@ -23,6 +23,7 @@ class PicturesController < ApplicationController
     #Picture.create(picture_params)
     Rails.logger.info "create was called"
     @picture = Picture.new(picture_params)
+    @picture.user_id = current_user.id
     if @picture.save(picture_params)
       redirect_to pictures_path, notice: "投稿を作成しました"
     else
