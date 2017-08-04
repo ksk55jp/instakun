@@ -18,5 +18,8 @@
 
 # Development memo
 /memo.txt
-*.jpg
-*.png
+#*.jpg
+#*.png
+# By adding this top page image is not pushed to Heroku.
+/public/uploads/picture/image/*/*.jpg
+/public/uploads/picture/image/*/*.png
