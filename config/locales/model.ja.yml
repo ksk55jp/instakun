@@ -6,11 +6,15 @@ ja:
   attributes:
     picture:
       title: "題名"
+      comment: "寸評"
+      image: "画像"
+      user:id: "投稿者ID"
     user:
-      title: "タイトル"
       name: "名前"
       email: "メールアドレス"
       current_password: "現在のパスワード"
       password: "パスワード"
       password_confirmation: "確認用パスワード"
       remember_me: "ログインを記憶"
+      one: "ユーザー名"
+      other: "一つ以上"
