@@ -1,0 +1,7 @@
+<p><%= @resource.email %>さんお世話になります!</p>
+
+<p>アカウントがロックされました</p>
+
+<p>以下のリンクよりロックを解除してください</p>
+
+<p><%= link_to 'ロックを解除', unlock_url(@resource, unlock_token: @token) %></p>

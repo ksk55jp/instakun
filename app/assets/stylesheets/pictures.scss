@@ -7,3 +7,15 @@
 .editarea>img{
   width: 460px;
 }
+.container {
+  width: 100%;
+}
+
+.flash { 
+  color: blue;
+  padding-top: 10px;
+}
+.postimage {
+	/* to avoid overlapped by footer */
+  margin-bottom: 200px;
+}

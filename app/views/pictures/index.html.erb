@@ -1,6 +1,11 @@
 <div class="containter">
   <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
-    <%= notice %><br>
+    <section class="main-header">
+      <p class="flash"><%= notice %> <%= alert %></p>
+    </section>
+		<br/>
+		<br/>
+		<br/>
     <%= link_to "新規投稿する", new_picture_path, class: 'btn btn-primary btn-block' %>
     <% @pictures.each do |picture| %>
       <div class="postimage">

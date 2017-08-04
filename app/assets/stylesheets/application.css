@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+/*
 .menu li {
   float:left;
   list-style: none;
@@ -20,3 +21,16 @@
   color skyblue;
   padding: 50px;
 }
+
+.menu li:after {
+  clear: both;
+  display: block;
+}
+*/
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('/assets/glyphicons-halflings-regular.eot');
+  src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+

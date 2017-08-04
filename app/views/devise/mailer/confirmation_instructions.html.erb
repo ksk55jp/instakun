@@ -1,0 +1,5 @@
+<p>ようこそ<%= @email %>さん!</p>
+
+<p>次のリンクをクリックしてアカウントを確定します</p>
+
+<p><%= link_to '確定する', confirmation_url(@resource, confirmation_token: @token) %></p>

@@ -8,15 +8,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <div class="menu">
+  <header>
     <ul>
-      <li><a href="#">top</a></li>
-      <li><a href="#">user info</a></li>
-      <li><a href="#">pictures</a></li>
-      <li><h1>インスタくん</h1></li>
+      <li><%= link_to '', pictures_path,  class: 'glyphicon glyphicon-camera' %></li>
+      <% if user_signed_in? %>
+				<li><%= link_to 'マイページ', edit_user_registration_path %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to 'ログイン', new_user_session_path%></li>
+        <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+      <% end %>
     </ul>
-  </div>
+  </header>
+
 <%= yield %>
+
+<footer>
+  <p>運営会社 KsK inc.</p>
+  <p>©️2017- Copyright KsK inc.</p>
+</footer>
 
 </body>
 </html>

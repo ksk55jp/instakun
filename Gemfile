@@ -54,4 +54,5 @@ gem 'twitter-bootstrap-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 
-
+# Added by KsK for login
+gem 'devise'
