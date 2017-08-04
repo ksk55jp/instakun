@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :pictures, only: [:index,:create, :new, :edit, :destroy, :update]
   #root 'pictures#index'
-  #root 'top#index'
+  root 'top#index'
 end
