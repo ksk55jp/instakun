@@ -59,3 +59,6 @@ gem 'mini_magick'
 
 # Added by KsK for login
 gem 'devise'
+
+# Added by KsK for viewing log file for Heroku
+gem 'rails_12factor', group: :production
