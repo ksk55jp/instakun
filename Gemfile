@@ -47,7 +47,7 @@ group :development, :test do
   gem 'better_errors'
 
   # Added by KsK for email verification # DIVE14Exam02
-  mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  gem 'letter_opener_web'
 end
 
 # Added by KsK for loading bootstrap
