@@ -67,3 +67,13 @@ gem 'rails_12factor', group: :production
 # Added by KsK for admin screen
 gem 'rails_admin'
 gem 'cancan'
+
+# Added by KsK for Omni Authentication
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+# Added by KsK for setup oauth keys..
+group :development do
+  gem 'dotenv-rails'
+end

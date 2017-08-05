@@ -6,7 +6,12 @@ Rails.application.routes.draw do
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
 
-  devise_for :users
+  #Changing for omni-auth
+  #devise_for :users
+  devise_for :users, controllers: {
+    omniauth_callbacks: "users/omniauth_callbacks"
+  }
+
   resources :pictures, only: [:index,:create, :new, :edit, :destroy, :update]
   #root 'pictures#index'
   root 'top#index'

@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
 
   protected
     def configure_permitted_parameters
+      Rails.logger.info "configure_permitted_parameters in"
       devise_parameter_sanitizer.permit(:sign_up,        keys: PERMISSIBLE_ATTRIBUTES)
       devise_parameter_sanitizer.permit(:account_update, keys: PERMISSIBLE_ATTRIBUTES)
     end
