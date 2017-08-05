@@ -49,4 +49,8 @@ class User < ActiveRecord::Base
       update_without_password(params, *options)
     end
   end
+
+  def self.create_unique_string
+    SecureRandom.uuid
+  end
 end
