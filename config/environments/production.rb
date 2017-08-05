@@ -79,6 +79,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Added by KsK for Email sending
+  config.action_mailer.default_url_options = { host: 'instakun.herokuapp.com' }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings =
     {
