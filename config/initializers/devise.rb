@@ -277,9 +277,11 @@ Devise.setup do |config|
   #
   #  Added by KsK For OmniAuth
   if Rails.env.prodction?
+    Rails.logger.info "[DEBUG] Production environment"
     config.omniauth :facebook, ENV["FACEBOOK_ID_PRODUCTION"], ENV["FACEBOOK_SECRET_PRODUCTION"], scope: 'email', display: 'popup', info_fields: 'name, email'
     config.omniauth :twitter,  ENV["TWITTER_ID_PRODUCTION"],  ENV["TWITTER_SECRET_PRODUCTION"],  scope: 'email', display: 'popup', info_fields: 'name, email'
   else
+    Rails.logger.info "[DEBUG] Dev environment"
     config.omniauth :facebook, ENV["FACEBOOK_ID_DEVELOPMENT"], ENV["FACEBOOK_SECRET_DEVELOPMENT"], scope: 'email', display: 'popup', info_fields: 'name, email'
     config.omniauth :twitter,  ENV["TWITTER_ID_DEVELOPMENT"],  ENV["TWITTER_SECRET_DEVELOPMENT"],  scope: 'email', display: 'popup', info_fields: 'name, email'
   end
